@@ -19,14 +19,14 @@ ultimo_registro = 'e1304';
 in = strfind(record,primer_registro);
 fi = strfind(record,ultimo_registro);
 
-carpeta_guardado = '<file_path>'; % <file_path> debe ser cambiado por la dirección donde se van a guardar los resultados del EMD
+carpeta_guardado = '<file_path>'; % <file_path> debe ser cambiado por la direcciÃ³n donde se van a guardar los resultados del EMD
 
 % Recorro cada registro
 for r = in : 5 : fi
     reg = record(r:r+4);
     disp(reg);
     
-    load('<file_path>') % <file_path> debe ser cambiado por la dirección donde se encuentran los registros de la base de datos en .mat (variable: registro)
+    load('<file_path>') % <file_path> debe ser cambiado por la direcciÃ³n donde se encuentran los registros de la base de datos en .mat (variable: registro)
     
     mkdir([carpeta_guardado '\' reg]);
     
@@ -37,6 +37,6 @@ for r = in : 5 : fi
             
         [imf,~] = emd(ecg);
         
-        save('<file_path>') % <file_path> debe ser cambiado por la dirección donde se guardaran los resultados
+        save('<file_path>') % <file_path> debe ser cambiado por la direcciÃ³n donde se guardaran los resultados
     end
 end
